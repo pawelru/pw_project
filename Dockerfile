@@ -28,7 +28,7 @@ RUN apt-get install -y cassandra
 
 # download the data
 RUN mkdir data
-RUN wget https://archive.org/download/stackexchange/coffee.stackexchange.com.7z -O data/temp.7z
+RUN wget https://archive.org/download/stackexchange/codereview.stackexchange.com.7z -O data/temp.7z
 RUN 7z e data/temp.7z -odata/
 RUN rm data/temp.7z
 
