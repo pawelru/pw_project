@@ -41,4 +41,6 @@ ADD init_keyspace.sh .
 ADD kafka_consumer.ipynb .
 ADD kafka_consumer_producer.ipynb .
 ADD kafka_producer.ipynb .
+ADD kafka_producer.py .
+ADD kafka_producer_manager.sh .
 ADD analysis.ipynb .
