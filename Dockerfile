@@ -12,6 +12,8 @@ RUN apt-get install -y gnupg2
 
 RUN pip install kafka-python
 RUN pip install cassandra-driver
+RUN pip install nltk
+RUN pip install pyldavis
 
 # install kafka
 RUN wget https://www-eu.apache.org/dist/kafka/2.2.0/kafka_2.12-2.2.0.tgz
@@ -38,9 +40,14 @@ ADD init_cassandra.sh .
 ADD init_keyspace.sh .
 
 # add notebooks
-ADD kafka_consumer.ipynb .
-ADD kafka_consumer_producer.ipynb .
-ADD kafka_producer.ipynb .
+ADD kafka_create_producer.sh .
 ADD kafka_producer.py .
-ADD kafka_producer_manager.sh .
+ADD kafka_producer.ipynb .
+ADD kafka_create_consumer_producer.sh .
+ADD kafka_consumer_producer.py .
+ADD kafka_consumer_producer.ipynb .
+ADD kafka_create_consumer.sh .
+ADD kafka_consumer.py .
+ADD kafka_consumer.ipynb .
+ADD analysis_kafka.ipynb .
 ADD analysis.ipynb .

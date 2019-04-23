@@ -1,6 +1,6 @@
 #!/bin/bash
-rm -rf logs
-mkdir logs
+mkdir -p logs
+find ./logs/ -regex ".*/producer_.*.txt" -delete
 
 count_process=$1
 
